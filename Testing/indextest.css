@@ -1,0 +1,28 @@
+.ImageTesting{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    overflow-x: hidden;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    background-color: none;
+    position: absolute;
+    top: 180px;
+    left: 175px;
+}
+#img1{
+    z-index: 1;
+}
+#img2{
+    z-index: 0;
+}
+#img3{
+    z-index: -1;
+}
