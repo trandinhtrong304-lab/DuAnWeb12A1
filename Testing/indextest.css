@@ -12,17 +12,65 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
-    background-color: none;
     position: absolute;
     top: 180px;
     left: 175px;
+    opacity: 0;
 }
+
 #img1{
+    z-index: 2;
+}
+
+#img2{
     z-index: 1;
 }
-#img2{
-    z-index: 0;
-}
+
 #img3{
-    z-index: -1;
+    z-index: 0;
+} 
+
+#img1{
+    animation: HieuUngXuatHien 2s linear forwards,
+     HieuUngBay 3s linear 2s forwards; /* Add 2 animation như này nếu animation tách riêng 2 thuộc tính thì thuộc tính sau ghi đè thuộc tính trước */
+} /* forwards giúp cố định vị trí sau khi xong animation */
+
+#img2{
+    animation: HieuUngXuatHien 2s linear 7s forwards,
+    HieuUngBay1 2.5s linear 9s forwards;
+}
+
+#img3{
+    animation: HieuUngXuatHien 2s linear 11.5s forwards,
+    HieuUngBay2 2s linear 13.5s forwards;
+}
+
+@keyframes HieuUngBay {
+    0% {}
+    100%{
+        transform: translate(180px, 230px);
+    }
+}
+
+@keyframes HieuUngBay1 {
+    0% {}
+    100%{
+        transform: translateY(230px);
+    }
+}
+
+@keyframes HieuUngBay2 {
+    0%{}
+    100%{
+        transform: translate(-175px, 230px);
+    } 
+}
+
+@keyframes HieuUngXuatHien{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

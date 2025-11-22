@@ -7,8 +7,9 @@
 body {
     background-color: black;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
+
 .head {
     position: relative;
     width: 100vw;
@@ -18,15 +19,18 @@ body {
     justify-content: space-between;
     padding: 2vh 2vw;
 }
+
 nav {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 nav:not(:last-child){
     font-size: 20px;
 }
+
 .contact {
     height: 5vh;
     padding: 0.75ch 1.5vw;
@@ -35,19 +39,23 @@ nav:not(:last-child){
     cursor: pointer;
     transition: all 0.4s ease;
 }
+
 .contact:hover {
     background-color: white;
     color: black;
 }
+
 .gioithieu {
     display: flex;
     justify-content: flex-end;
     font-size: 1vw;
 }
+
 .gioithieu p{
     width: 35vw;
     margin-top: 5vh;
 }
+
 .logo {
     position: absolute;
     bottom: 2px;
@@ -55,9 +63,87 @@ nav:not(:last-child){
     font-weight: bold;
     line-height: 100px;
 }
+
 .Tatcalataiphuc {
     position: absolute;
     bottom: 2px;
     right: 2px;
     font-size: 20px;
 }
+
+.ImageTesting{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+    left: 175px;
+    opacity: 0;
+}
+
+#img1{
+    z-index: 2;
+}
+
+#img2{
+    z-index: 1;
+}
+
+#img3{
+    z-index: 0;
+} 
+
+#img1{
+    animation: HieuUngXuatHien 2s linear forwards,
+     HieuUngBay 3s linear 2s forwards; /* Add 2 animation như này nếu animation tách riêng 2 thuộc tính thì thuộc tính sau ghi đè thuộc tính trước */
+} /* forwards giúp cố định vị trí sau khi xong animation */
+
+#img2{
+    animation: HieuUngXuatHien 2s linear 7s forwards,
+    HieuUngBay1 2.5s linear 9s forwards;
+}
+
+#img3{
+    animation: HieuUngXuatHien 2s linear 11.5s forwards,
+    HieuUngBay2 2s linear 13.5s forwards;
+}
+
+@keyframes HieuUngBay {
+    0% {}
+    100%{
+        transform: translate(180px, 230px);
+    }
+}
+
+@keyframes HieuUngBay1 {
+    0% {}
+    100%{
+        transform: translateY(230px);
+    }
+}
+
+@keyframes HieuUngBay2 {
+    0%{}
+    100%{
+        transform: translate(-175px, 230px);
+    } 
+}
+
+@keyframes HieuUngXuatHien{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
