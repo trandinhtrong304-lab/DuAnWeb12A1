@@ -45,6 +45,10 @@ nav:not(:last-child){
     color: black;
 }
 
+.DoanMoDau {
+    cursor: pointer;
+}
+
 .gioithieu {
     display: flex;
     justify-content: flex-end;
@@ -133,7 +137,7 @@ nav:not(:last-child){
 .number1{
     width: 0;
     top: 20vh;
-    left: 17vw;
+    left: 15vw;
     text-shadow: 2px 4px 5px black, 2px -4px 5px white;
     border-right: 2px;
     overflow: hidden; /*Trong qua trinh khoi chay tu 0 den 100% thi chu bi che mo ra dan*/
@@ -147,7 +151,7 @@ nav:not(:last-child){
     overflow: hidden;
     white-space: nowrap;
     top: 20vh;
-    left: 46.5vw;
+    left: 44vw;
     text-shadow: 2px 4px 5px black, 2px -4px 5px white;
     animation: typing 30s forwards;
     animation-delay: 17.5s;
@@ -158,7 +162,7 @@ nav:not(:last-child){
     overflow: hidden;
     white-space: nowrap;
     top: 20vh;
-    left: 76vw;
+    left: 74vw;
     text-shadow: 2px 4px 5px black, 2px -4px 5px white;
     animation: typing 30s forwards;
     animation-delay: 19.5s;
@@ -208,3 +212,26 @@ nav:not(:last-child){
   from { width: 0; }
   to { width: 100%; }
 }
+
+#namhoc2023 {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    border: 5px white solid;
+    position: relative;
+}
+
+#namhoc2024 {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    border: 5px white solid;
+    position: relative;
+}
+
+#namhoc2025 {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    border: 5px white solid;
+    position: relative;
